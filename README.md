@@ -1,2 +1,1 @@
-# YouTubeFrontEnd
-YouTube FrontEnd using ReactJS, Styled-Components.
+# YouTube FrontEnd using ReactJS, Styled-Components.
