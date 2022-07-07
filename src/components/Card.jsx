@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
 	width: 360px;
@@ -47,17 +48,19 @@ const Info = styled.div`
 
 const Card = () => {
 	return (
-		<Container>
-			<Image src='https://wallpapers.com/images/high/mini-youtube-logo-in-black-ts6y4jrcv80kkxxp.jpg' />
-			<Details>
-				<ChannelImage src='https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg' />
-				<Texts>
-					<Title>Video Title</Title>
-					<ChannelName>Channel Name</ChannelName>
-					<Info>93K views | 1 day ago</Info>
-				</Texts>
-			</Details>
-		</Container>
+		<Link to='/video/test' style={{ textDecoration: 'none' }}>
+			<Container>
+				<Image src='https://wallpapers.com/images/high/mini-youtube-logo-in-black-ts6y4jrcv80kkxxp.jpg' />
+				<Details>
+					<ChannelImage src='https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg' />
+					<Texts>
+						<Title>Video Title</Title>
+						<ChannelName>Channel Name</ChannelName>
+						<Info>93K views | 1 day ago</Info>
+					</Texts>
+				</Details>
+			</Container>
+		</Link>
 	);
 };
 

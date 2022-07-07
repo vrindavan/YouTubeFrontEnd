@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
@@ -84,13 +85,18 @@ const Menu = ({ darkMode, setDarkMode }) => {
 	return (
 		<Container>
 			<Wrapper>
-				<Logo>
-					<Img src={NoTube} />
-					Premium{' '}
-					<sup>
-						<sup>IN</sup>
-					</sup>
-				</Logo>
+				<Link
+					to='/'
+					style={{ textDecoration: 'none', color: 'inherit' }}>
+					{' '}
+					<Logo>
+						<Img src={NoTube} />
+						Premium
+						<sup>
+							<sup>IN</sup>
+						</sup>
+					</Logo>
+				</Link>
 				<Item>
 					<HomeIcon />
 					Home
@@ -161,7 +167,7 @@ const Menu = ({ darkMode, setDarkMode }) => {
 				</Item>
 				<Item onClick={() => setDarkMode(!darkMode)}>
 					<SettingsBrightnessOutlinedIcon />
-					Mode
+					{darkMode ? 'Light' : 'Dark'} Mode
 				</Item>
 			</Wrapper>
 		</Container>
