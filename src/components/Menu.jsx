@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
 import HomeIcon from '@mui/icons-material/Home';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
@@ -51,6 +52,10 @@ const Item = styled.div`
 	gap: 20px;
 	cursor: pointer;
 	padding: 7.5px 0;
+
+	&:hover {
+		background-color: ${({ theme }) => theme.soft};
+	}
 `;
 
 const Hr = styled.hr`
@@ -121,10 +126,12 @@ const Menu = ({ darkMode, setDarkMode }) => {
 				<Hr />
 				<Login>
 					Sign in to like videos, comment, and subscribe.
-					<Button>
-						<AccountCircleOutlinedIcon />
-						SIGN IN
-					</Button>
+					<Link to='signin' style={{ textDecoration: 'none' }}>
+						<Button>
+							<AccountCircleOutlinedIcon />
+							SIGN IN
+						</Button>
+					</Link>
 				</Login>
 				<Hr />
 				<Title>BEST OF NOTUBE</Title>
