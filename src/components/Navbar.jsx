@@ -8,7 +8,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 const Container = styled.div`
 	position: sticky;
 	top: 0;
-	background-color: ${({ theme }) => theme.bgLighter};
+	background-color: ${({ theme }) => theme.bgLight};
 	height: 56px;
 `;
 
@@ -54,7 +54,6 @@ const Button = styled.button`
 	align-items: center;
 	gap: 5px;
 `;
-
 const Navbar = () => {
 	return (
 		<Container>

@@ -30,7 +30,6 @@ const Container = styled.div`
 	position: sticky;
 	top: 0;
 `;
-
 const Wrapper = styled.div`
 	padding: 18px 26px;
 `;
@@ -51,20 +50,18 @@ const Item = styled.div`
 	align-items: center;
 	gap: 20px;
 	cursor: pointer;
-	padding: 7.5px 0;
-
+	padding: 7.5px 0px;
 	&:hover {
 		background-color: ${({ theme }) => theme.soft};
 	}
 `;
 
 const Hr = styled.hr`
-	margin: 15px 0;
+	margin: 15px 0px;
 	border: 0.5px solid ${({ theme }) => theme.soft};
 `;
 
 const Login = styled.div``;
-
 const Button = styled.button`
 	padding: 5px 15px;
 	background-color: transparent;
@@ -83,7 +80,7 @@ const Title = styled.h2`
 	font-size: 14px;
 	font-weight: 500;
 	color: #aaaaaa;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 `;
 
 const Menu = ({ darkMode, setDarkMode }) => {
@@ -93,10 +90,9 @@ const Menu = ({ darkMode, setDarkMode }) => {
 				<Link
 					to='/'
 					style={{ textDecoration: 'none', color: 'inherit' }}>
-					{' '}
 					<Logo>
 						<Img src={NoTube} />
-						Premium
+						NOTUBE{' '}
 						<sup>
 							<sup>IN</sup>
 						</sup>
